@@ -9,6 +9,7 @@ resource "aws_instance" "myfirstinstance" {
   instance_type = "t2.micro"
   key_name = "levelup_key"
   availability_zone = "us-east-2a"
+  user_data = file("installnginx.sh")
 
   tags = {
     "Name" = "demo_instance"
